@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Employee Directory</title>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar">
+        <div>
+          <h1>Employee Directory</h1>
+        </div>
+        <div>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search employees..."
+          />
+        </div>
+      </nav>
+      <div class="sortaddsection">
+        <div class="fliters">
+          <div class="sortfilterdiv">
+            <label for="sort">Sort:</label>
+            <select name="" id="sort">
+              <option value="all">-- Select --</option>
+              <option value="name">First Name</option>
+              <option value="department">Department</option>
+            </select>
+          </div>
+          <div class="numberofemployees">
+            <label for="pagination">Show:</label>
+            <select name="" id="pagination">
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+        </div>
+        <div class="addemployeediv">
+          <button class="addEmployee" id="addemployee">Add Employee</button>
+        </div>
+      </div>
+    </div>
+    <!-- Employee Cards -->
+    <div class="card-container" id="cardContainer"></div>
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2 style="font-size: 32px">Add Employee</h2>
+        <form action="" class="addemployeeform" id="employeeForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="First name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Last name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="department">Department</label>
+            <select name="" id="department" required>
+              <option value="all">-- Select --</option>
+              <option value="hr">IT</option>
+              <option value="it">HR</option>
+              <option value="finance">Finance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select name="" id="role" required>
+              <option value="all">-- Select --</option>
+              <option value="hr">Manager</option>
+              <option value="it">Developer</option>
+              <option value="finance">Analyst</option>
+            </select>
+          </div>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
